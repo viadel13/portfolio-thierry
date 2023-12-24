@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar/Index";
+import Hero from "./components/Hero/Index";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+
+const theme = createTheme({
+  palette:{
+    secondary:{
+      main: '#787878'
+    },
+    col:{
+      customColor: 'red'
+    }
+  }
+})
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+     <Navbar />
+     <Hero />
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+     <div>dsds</div>
+    </ThemeProvider>
   );
 }
 
