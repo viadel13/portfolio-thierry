@@ -21,6 +21,10 @@ function App() {
     <ThemeProvider theme={theme}>
      <Navbar />
      <Hero />
+     dsdsdsd
+     dsdsdsd
+     dsdsdsd
+     dsdsdsd
     </ThemeProvider>
   );
 }
