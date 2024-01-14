@@ -35,9 +35,9 @@ const Sidebar = () => {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250, color: "white"  }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : '100vw', color: "white", bgcolor: '#212529', height: '100%',  }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
+    
       onKeyDown={toggleDrawer(anchor, false)}
 
     >
@@ -53,11 +53,10 @@ const Sidebar = () => {
           alignItems: 'center',
         }}
         > 
-        <Avatar src={profil} alt="profil" /> 
         <Typography variant="h6" ml={1}>Thierry Fouemene </Typography>
       </Box>
       <List>
-        <ListItem disablePadding>
+        <ListItem   onClick={toggleDrawer(anchor, false)} disablePadding>
           <ListItemButton >
             <ListItemIcon>
               <InboxIcon />
@@ -131,11 +130,6 @@ const Sidebar = () => {
         anchor='left'
         open={state['left']}
         onClose={toggleDrawer('left', false)}
-        sx={{
-          '& .css-4t3x6l-MuiPaper-root-MuiDrawer-paper': {
-            background: `${blueGrey[900]}`,
-          },
-        }}
       >
         {list('left')}
       </Drawer>
