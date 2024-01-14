@@ -29,7 +29,7 @@ const Hero = () => {
             height: { xs: '50vh', sm: '60vh', md: '100vh' },
             display: 'block',
             filter: 'brightness(0.3) contrast(0.9)',
-            objectFit: 'cover'
+   
 
           }}
           src={hero2}
@@ -44,7 +44,7 @@ const Hero = () => {
             height: { xs: '50vh', sm: '60vh', md: '100vh' },
             display: 'block',
             filter: 'brightness(0.3) contrast(0.9)',
-            objectFit: 'cover'
+
           }}
           src={hero3}
           alt='hero1'
@@ -58,7 +58,7 @@ const Hero = () => {
             height: { xs: '50vh', sm: '60vh', md: '100vh' },
             display: 'block',
             backgroundColor: 'rgba(3, 3, 3, 0.349)',
-            objectFit: 'cover'
+      
           }}
           src={YouPain}
           alt='hero1'
