@@ -10,12 +10,14 @@ import {
   ListItemIcon, 
   Divider, 
   Typography, 
-  Avatar
+  Avatar,
+  IconButton
 } from "@mui/material"
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { blueGrey } from '@mui/material/colors';
 import profil from '../../assets/images/avatar.jpg';
+import { Article, Close, ContactPage, Folder, Home, Info, Menu, NoteAlt, Person } from "@mui/icons-material";
 
 const Sidebar = () => {
 
@@ -51,47 +53,52 @@ const Sidebar = () => {
         sx={{
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'space-between'
         }}
         > 
         <Typography variant="h6" ml={1}>Thierry Fouemene </Typography>
+        <IconButton sx={{colorr: '#212529'}} onClick={toggleDrawer(anchor, false)} >
+          <Close sx={{ fontSize: '25px' }} />
+        </IconButton>
       </Box>
       <List>
-        <ListItem   onClick={toggleDrawer(anchor, false)} disablePadding>
+        <ListItem onClick={toggleDrawer(anchor, false)} disablePadding>
           <ListItemButton >
             <ListItemIcon>
-              <InboxIcon />
+              <Home sx={{color: 'white'}} />
             </ListItemIcon>
             <ListItemText primary='Accueil' />
           </ListItemButton>
+
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem onClick={toggleDrawer(anchor, false)}  disablePadding>
           <ListItemButton >
             <ListItemIcon>
-              <InboxIcon />
+              <Folder sx={{color: 'white'}} />
             </ListItemIcon>
             <ListItemText primary='Portfolio' />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem onClick={toggleDrawer(anchor, false)}  disablePadding>
           <ListItemButton >
             <ListItemIcon>
-              <InboxIcon />
+              <Article sx={{color: 'white'}} />
             </ListItemIcon>
             <ListItemText primary='Actualites' />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem onClick={toggleDrawer(anchor, false)}  disablePadding>
           <ListItemButton >
             <ListItemIcon>
-              <InboxIcon />
+              <Person sx={{color: 'white'}} />
             </ListItemIcon>
             <ListItemText primary='Auteurs' />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem onClick={toggleDrawer(anchor, false)}  disablePadding>
           <ListItemButton >
             <ListItemIcon>
-              <InboxIcon />
+              <NoteAlt sx={{color: 'white'}} />
             </ListItemIcon>
             <ListItemText primary='Directeur artistique' />
           </ListItemButton>
@@ -100,18 +107,18 @@ const Sidebar = () => {
       </List>
       <Divider />
       <List>
-        <ListItem disablePadding>
+        <ListItem onClick={toggleDrawer(anchor, false)} disablePadding>
           <ListItemButton >
             <ListItemIcon>
-              <InboxIcon />
+              <Info sx={{color: 'white'}} />
             </ListItemIcon>
             <ListItemText primary='A propos' />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem onClick={toggleDrawer(anchor, false)} disablePadding>
           <ListItemButton >
             <ListItemIcon>
-              <InboxIcon />
+              <ContactPage sx={{color: 'white'}} />
             </ListItemIcon>
             <ListItemText primary='Contact' />
           </ListItemButton>
@@ -124,7 +131,7 @@ const Sidebar = () => {
 
     <Box sx={{ display: { xs: 'flex', md: 'none' }}}>
       <Button sx={{ color: 'white', '&:hover': { backgroundColor: 'transparent' }, position: 'relative', left: '20px' }} onClick={toggleDrawer('left', true)} disableRipple>
-        <MoreVertIcon sx={{ fontSize: '35px' }} />
+        <Menu sx={{ fontSize: '35px' }} />
       </Button>
       <Drawer
         anchor='left'
